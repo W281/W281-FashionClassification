@@ -1,0 +1,23 @@
+import umap
+import numpy as np
+import pandas as pd
+
+# Load your data
+data = pd.read_csv('your_data.csv')
+
+# Train the UMAP model
+model = umap.UMAP(n_neighbors=15, min_dist=0.1, n_components=2)
+embedding = model.fit_transform(data)
+
+# Save the trained model
+import joblib
+joblib.dump(model, 'umap_model.pkl')
+
+# Load new data
+new_data = pd.read_csv('new_data.csv')
+
+# Load the saved model
+model = joblib.load('umap_model.pkl')
+
+# Transform new data
+new_embedding = model.transform(new_data)
