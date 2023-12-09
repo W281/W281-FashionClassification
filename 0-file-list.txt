@@ -1,0 +1,8 @@
+Dataset3: creation of RGB Vector
+Dataset4: creation of HOG, BRISK and grayscale vectors
+4-UMAP: UMAP on grayscale data
+5-UMAP: UMAP on HOG, BRISK
+8-Classifier-LinearSVC: grayscale data, and UMAP output
+8-Classifier-K: UMAP output
+10-Linear-SVC: UMAP of BRISK, HOG and grayscale
+11-Classifier-K: UMAP of BRISK, HOG and grayscale
